@@ -1,0 +1,37 @@
+<p><strong>Requirement</strong></p>
+<ul>
+<li>Godaddy Delux Shared Hosting</li>
+<li>SSH Access to the account</li>
+<li>Ready to Host Node Web App</li>
+</ul>
+<p>I have sample node web server app that you can download at github: <a href="https://github.com/loynin/node-web-server">Node Web Server App</a></p>
+<p><strong>Process</strong></p>
+<p>So now let go straight of how to set up.</p>
+<p>Go to Godaddy hosting cPanel and enable SSH for your hosting account. Therefore, you suppose to have now:&nbsp;</p>
+<ul>
+<li>Public IP address of your hosting server</li>
+<li>Username of SSH</li>
+<li>Password of SSH - change it if you don't know</li>
+<li>SSH Port Number</li>
+</ul>
+<p>&nbsp;</p>
+<p>SSH to the Hosting Server:</p>
+<ol>
+<li>`<span style="background-color: #ff6600;"><strong>ssh -p port username@IpAddress</strong></span>` Then provide the password when asked</li>
+<li>Installing the NVM on your Server Run this first <br />`<span style="background-color: #ff6600;"><strong>wget -qO- https://cdn.rawgit.com/creationix/nvm/master/install.sh | bash</strong></span>` <br />then run this `<span style="background-color: #ff6600;"><strong>nvm install stable</strong></span>`</li>
+<li>Check if `node` and `npm` are installed: Please exit from ssh and login again before change take effect. `<strong>node -v</strong>` `<strong>npm -v</strong>`</li>
+<li>Changing the `.htaccess` file:
+<ol>
+<li>`<span style="background-color: #ff6600;">cd ~/public_html</span>`</li>
+<li>`<span style="background-color: #ff6600;">nano .htaccess</span>`</li>
+<li>then copy the below code into the file: ```<br /> DirectoryIndex disabled <br />RewriteEngine On <br />RewriteRule ^$ http://127.0.0.1:XXXXX/ [P,L] <br />RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.*)$ http://127.0.0.1:XXXXX/$1 [P,L]&nbsp;</li>
+<li>Save file and then go back to terminal</li>
+<li>Clone sample Node App from <a href="https://github.com/loynin/node-web-server">Node Web Server App</a> by <br />`<span style="background-color: #ff6600;">git clone https://github.com/loynin/node-web-server.git nodes</span>` wait until it finish.</li>
+<li>Install the dependencies: <br />`<span style="background-color: #ff6600;">cd nodes</span>` <br />`<span style="background-color: #ff6600;">npm install</span>` <br />wait until it finish</li>
+<li>Run the Node App <br />From `<strong>nodes</strong>` directory run `<span style="background-color: #ff6600;"><strong>node server.js</strong></span>`</li>
+<li>Keep Node Running forever after terminal is closed: <br />`<span style="background-color: #ff6600;">node app.js &amp;</span>` <br />or install `<span style="background-color: #ff6600;">npm install -g forever</span>` then start the app by `<span style="background-color: #ff6600;">forever start server.js</span>`</li>
+<li>if you want to stop the app: `<span style="background-color: #ff6600;">forever stop server.js</span>`</li>
+<li>Have fun for your new app</li>
+</ol>
+</li>
+</ol>
