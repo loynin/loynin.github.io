@@ -1,0 +1,31 @@
+---
+Layout: post
+title: “My Dream to Develop the Most Productive App in Time Management”
+Date: 2018-11-07
+---
+<div style="font-size: 12">
+<p>
+To be honest, I should have hundreds of apps on App Store and Google Play Store if I could follow my goals. The reality is I was not. I have worked hard, but I have accomplished little. Sometime I was procrastinated and was keeping things behind; and sometime I have skipped tasks that I should do. I have tried to find ways to help me to keep focus and pursue my goals but what I have founded seem effect little to my accomplishment.  Who can solve my problem? No one can solve my problem it up to me to find the solution. 
+</p>
+
+
+<table>
+  <tr>
+    <td style="vertical-align:top">
+       <img src="https://github.com/loynin/loynin.github.io/blob/master/img/iphoneapp.png?raw=true" width="400" />
+    </td>
+    <td style="vertical-align:top">
+      <p>
+For all the reason I was behind, I decided to develop a tool to help me achieve more of my goals. The tool is a mobile app that can run on iOS and Android devices. As I am using this app, I can complete my tasks 75% more than what I used to. To use this app, I have to collect my entire tasks and schedule it in my calendar. After that the magic happen, the app will set the timer for me to the task I have scheduled and count down the time. This helps me to work on the task and compete with the counter and the result is very satisfied.
+</p>
+      <p>
+        This app will be on Apple App Store and Google Play Store on January 1, 2019. Right now I am using the beta version of this app. 
+      </p>
+      <p>
+        I will provide the linked and app name when it is already list on the App Store.
+      </p>
+    </td>
+  </tr>
+</table>
+</div>
+
