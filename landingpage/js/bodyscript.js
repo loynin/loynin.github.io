@@ -1,5 +1,4 @@
 
-<script type="text/javascript">
 
     function countLines(object) {
         var divHeight = document.getElementById("item-header").offsetHeight;
@@ -2438,4 +2437,3 @@ function showbottom(category, keys) {
     dialog.dialog('open');
     return false;
 }
-</script>
