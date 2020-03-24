@@ -1137,12 +1137,8 @@
 
 
 
-<form action="/">
-    <input type="hidden" id="lp_form_id" name="lp_form_id" value="mortgage_homepurchase_refi_hybrid">
-</form>
 
-    <a href="https://leadPops.com" target="_blank" class="micro-logo" alt="real estate marketing"><img src="//short-sale-7887.secure-clix.com/images/realestate/realestate/micro-logo.png" alt="real estate marketing" /></a>
-	
+
 
     var cashout_max_index = 0;
     var cashout_selected_index = 0;
@@ -2250,7 +2246,7 @@
         calculationProgressBar11(cnt_bar);
         jQuery("#lp_replace_one").leadpops();
     });
-<!-- pete copy start -->
+
 
 
     jQuery(document).ready(function(){
