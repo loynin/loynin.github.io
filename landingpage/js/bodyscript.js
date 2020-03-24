@@ -1135,11 +1135,6 @@
         });
     });
 
-
-
-
-
-
     var cashout_max_index = 0;
     var cashout_selected_index = 0;
 
