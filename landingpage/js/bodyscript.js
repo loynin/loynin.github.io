@@ -234,10 +234,9 @@
 
 
     });
-</script>
 
 
-<script type="text/javascript">
+
     function resizer() {
         $("#f-p2-item").css('width' , '100%');
         $('.question.current').find('.option').each(function(index, el) {
@@ -1136,7 +1135,7 @@
         });
     });
 
-</script>
+
 
 <form action="/">
     <input type="hidden" id="lp_form_id" name="lp_form_id" value="mortgage_homepurchase_refi_hybrid">
@@ -1144,7 +1143,6 @@
 
     <a href="https://leadPops.com" target="_blank" class="micro-logo" alt="real estate marketing"><img src="//short-sale-7887.secure-clix.com/images/realestate/realestate/micro-logo.png" alt="real estate marketing" /></a>
 	
-<script type="text/javascript">
 
     var cashout_max_index = 0;
     var cashout_selected_index = 0;
@@ -2204,9 +2202,6 @@
         };
     })(jQuery);
 
-</script>
-
-<script type="text/javascript">
     jQuery(document).ready(function($){
 		        $("#lp_replace_one").append('<img src="//short-sale-7887.secure-clix.com/images/realestate/realestate/lock1.jpg" class = "privacy-image" alt="" />');
 		        if ($(window).width() <= 320) {
@@ -2255,11 +2250,8 @@
         calculationProgressBar11(cnt_bar);
         jQuery("#lp_replace_one").leadpops();
     });
-</script>
-<script type="text/javascript" src="min_mvp_assets/js/mvp.js"></script>
 <!-- pete copy start -->
 
-<script>
 
     jQuery(document).ready(function(){
         try {
