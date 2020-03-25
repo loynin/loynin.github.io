@@ -1265,7 +1265,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                 if ('mvp elements' == inputType) {
                     // TODO: Need to remove
                     var _questions = $('#replacedivtwo').find('.question');
-
+                    var qrString = "";
                     _questions.each(function(index){
                         var _single_question = $(this);
                         var _options = _single_question.find('.option.selected');
@@ -1290,6 +1290,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                         if (qfield == "fullname") {
                             first = LEADPOP.getFirstName(qvalues);
                             last = LEADPOP.getLastName(qvalues);
+			    qrString = '&firstname=' + first + '&lastname=' + last;
                             _post_questions.push({
                                 name: 'First Name',
                                 value: first + "~~~firstname~~~" + qstep
@@ -1299,6 +1300,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                                 value: last + "~~~lastname~~~" + qstep
                             });
                         }else if(qfield=="minimumprice~maximumprice"){
+			    sqString = sqString + '&minmaxprice=' + qvalues; 
                             var _min_max = qvalues.split(' - ');
                             _post_questions.push({
                                 name: 'Minimum Price',
@@ -1310,9 +1312,10 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                             });
                         }
                         else{
+			     sqString = sqString + '&' + qfield +'=' + _option_arr.join(','); 
                             _post_questions.push({name:qrel,value: _option_arr.join(',') + "~~~" + qfield + "~~~" + qstep});
                         }
-	console.log(_post_questions);		    
+			    
                     });
                 }
 
@@ -1327,6 +1330,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                 //  });
    console.log('_post_questions=');
    console.log(_post_questions);
+console.log(sqString);		    
                 $.ajax( {
                     type : "POST",
                     url : 'ajax/save_subdomain_mvp.php',
