@@ -1300,7 +1300,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                                 value: last + "~~~lastname~~~" + qstep
                             });
                         }else if(qfield=="minimumprice~maximumprice"){
-			    sqString = sqString + '&minmaxprice=' + qvalues; 
+			    qrString = qrString + '&minmaxprice=' + qvalues; 
                             var _min_max = qvalues.split(' - ');
                             _post_questions.push({
                                 name: 'Minimum Price',
@@ -1312,7 +1312,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                             });
                         }
                         else{
-			     sqString = sqString + '&' + qfield +'=' + _option_arr.join(','); 
+			     qrString = qrString + '&' + qfield +'=' + _option_arr.join(','); 
                             _post_questions.push({name:qrel,value: _option_arr.join(',') + "~~~" + qfield + "~~~" + qstep});
                         }
 			    
@@ -1330,7 +1330,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                 //  });
    console.log('_post_questions=');
    console.log(_post_questions);
-console.log(sqString);		    
+console.log(qrString);		    
                 $.ajax( {
                     type : "POST",
                     url : 'ajax/save_subdomain_mvp.php',
