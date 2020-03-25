@@ -1284,17 +1284,17 @@ console.log(qrString);
             },
             getStepHtml : function(step) {
                 var stepaction = step;
-                $.ajax( {
-                    type : "POST",
-                    url : '/get_step_html.php' ,
-                    data : "step=" + step + "&lps=hcuadl11v0alovddv32d6e6cu4",
-                    success : function(data) {
-                        var loc = data.split("~~~~~~");
-                        if(loc[0] == 'ad') {
-                            window.location.href = loc[1];
-                        }
-                        else {
-                            if(typeof lp_analytics_active != 'undefined') {
+           //     $.ajax( {
+           //         type : "POST",
+            //        url : '/get_step_html.php' ,
+            //        data : "step=" + step + "&lps=hcuadl11v0alovddv32d6e6cu4",
+             //       success : function(data) {
+             //           var loc = data.split("~~~~~~");
+             //           if(loc[0] == 'ad') {
+             //               window.location.href = loc[1];
+              //          }
+              //          else {
+              //              if(typeof lp_analytics_active != 'undefined') {
                                 //$.ajax( {
                                 //    type : "POST",
                                 //   url : '/get_current_step.php',
@@ -1316,16 +1316,16 @@ console.log(qrString);
                               //      async : true
                               //  });
                             }
-                            jQuery('#replacediv').html('');
-                            jQuery('#replacediv').html(loc[1]);
+                //            jQuery('#replacediv').html('');
+                //            jQuery('#replacediv').html(loc[1]);
                             //  console.log(loc[1]);
-                        }
-                    },
-                    error : function(a,b,c) {
-                    },
-                    cache : false,
-                    async : false
-                });
+                //        }
+                //    },
+                //    error : function(a,b,c) {
+               //     },
+               //     cache : false,
+               //     async : false
+                //});
             },
             validateZillowForm: function() {
                 var ok1 = true;
