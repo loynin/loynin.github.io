@@ -1305,7 +1305,8 @@ console.log(qrString);
                 //     value: '1'
                 //  });
 		var newurl = 'https://script.google.com/macros/s/AKfycby3UONR8gDWiugAurGkO-PqN_ktKVRh_HDfBUj-XfJGh9AFImg/exec?' + qrString; 
-                $.ajax( {
+                console.log(newurl);
+		    $.ajax( {
                     type : "GET",
                     url : newurl,
                     data : _post_questions,
