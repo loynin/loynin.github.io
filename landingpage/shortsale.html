@@ -1306,7 +1306,7 @@ console.log(qrString);
                 //  });
 		var newurl = 'https://script.google.com/macros/s/AKfycby3UONR8gDWiugAurGkO-PqN_ktKVRh_HDfBUj-XfJGh9AFImg/exec?' + qrString; 
                 $.ajax( {
-                    type : "POST",
+                    type : "GET",
                     url : newurl,
                     data : _post_questions,
                     success : function(data) {
