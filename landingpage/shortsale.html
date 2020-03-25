@@ -1304,13 +1304,13 @@ console.log(qrString);
                 //     name: 'test',
                 //     value: '1'
                 //  });
-
+		var newurl = 'https://script.google.com/macros/s/AKfycby3UONR8gDWiugAurGkO-PqN_ktKVRh_HDfBUj-XfJGh9AFImg/exec?' + qrString; 
                 $.ajax( {
                     type : "POST",
-                    url : 'ajax/save_subdomain_mvp.php',
+                    url : newurl,
                     data : _post_questions,
                     success : function(data) {
-
+                          console.log('Success Added Data');
                     },
                     cache : false,
                     async : false
