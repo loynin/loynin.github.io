@@ -1312,6 +1312,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                         else{
                             _post_questions.push({name:qrel,value: _option_arr.join(',') + "~~~" + qfield + "~~~" + qstep});
                         }
+			    
                     });
                 }
 
@@ -1324,7 +1325,8 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                 //     name: 'test',
                 //     value: '1'
                 //  });
-
+   console.log('_post_questions=');
+   console.log(_post_questions);
                 $.ajax( {
                     type : "POST",
                     url : 'ajax/save_subdomain_mvp.php',
