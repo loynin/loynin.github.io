@@ -1352,7 +1352,8 @@ console.log(qrString);
             },
             getStepHtml : function(step) {
                 var stepaction = step;
-                $.ajax( {
+                /*
+		    $.ajax( {
                     type : "POST",
                     url : '/get_step_html.php' ,
                     data : "step=" + step + "&lps=hcuadl11v0alovddv32d6e6cu4",
@@ -1394,6 +1395,7 @@ console.log(qrString);
                     cache : false,
                     async : false
                 });
+		*/
             },
             validateZillowForm: function() {
                 var ok1 = true;
