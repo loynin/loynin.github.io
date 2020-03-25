@@ -1141,15 +1141,15 @@ border-radius: 4px;background:#ABB3B6;padding:3px;  }
                 });
                 qa = qa; // +  'lps=hcuadl11v0alovddv32d6e6cu4';
                 //alert(qa);
-                console.log(qa);
-                $.ajax( {
-                    type : "POST",
-                    url : '/save_contact_info.php',
-                    data : qa,
-                    success : function(data) {},
-                    cache : false,
-                    async : false
-                });
+                //console.log(qa);
+                //$.ajax( {
+                //    type : "POST",
+                //   url : '/save_contact_info.php',
+                //    data : qa,
+                //    success : function(data) {},
+                //    cache : false,
+                //    async : false
+               // });
             },
             saveData : function(inputType) {
                 //alert(inputType);
@@ -1295,26 +1295,26 @@ console.log(qrString);
                         }
                         else {
                             if(typeof lp_analytics_active != 'undefined') {
-                                $.ajax( {
-                                    type : "POST",
-                                    url : '/get_current_step.php',
-                                    data : "lps=hcuadl11v0alovddv32d6e6cu4",
-                                    success : function(currentstep) {
-                                        var steplabel = 'Step' + currentstep;
-                                        var lp_form_name = $('#lp_form_id').val();
-                                        if(typeof lp_analytics_active != 'undefined') {
-                                            if( lp_analytics_active == 'y' && stepaction != 'back' && stepaction != 'last') {
-                                                _gaq.push(['_trackEvent', lp_form_name, 'Step', steplabel, currentstep, 0]);
-                                            }
-                                            else if( lp_analytics_active == 'y' && stepaction == 'last') {
-                                                _gaq.push(['_trackEvent', lp_form_name, 'Step', steplabel, currentstep, 0]);
-                                            }
-                                        }
+                                //$.ajax( {
+                                //    type : "POST",
+                                //   url : '/get_current_step.php',
+                                //    data : "lps=hcuadl11v0alovddv32d6e6cu4",
+                                //    success : function(currentstep) {
+                                //        var steplabel = 'Step' + currentstep;
+                                //        var lp_form_name = $('#lp_form_id').val();
+                                //        if(typeof lp_analytics_active != 'undefined') {
+                                //            if( lp_analytics_active == 'y' && stepaction != 'back' && stepaction != 'last') {
+                                 //               _gaq.push(['_trackEvent', lp_form_name, 'Step', steplabel, currentstep, 0]);
+                                //            }
+                                //            else if( lp_analytics_active == 'y' && stepaction == 'last') {
+                                 //               _gaq.push(['_trackEvent', lp_form_name, 'Step', steplabel, currentstep, 0]);
+                                //            }
+                                //        }
 
-                                    },
-                                    cache : false,
-                                    async : true
-                                });
+                              //      },
+                              //      cache : false,
+                              //      async : true
+                              //  });
                             }
                             jQuery('#replacediv').html('');
                             jQuery('#replacediv').html(loc[1]);
