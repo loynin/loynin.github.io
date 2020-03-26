@@ -1282,6 +1282,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;
                 var tRel;
                 var fields = jQuery('#leadpopquoteform').serializeArray();
                 var _post_questions = [];
+		var qrString = "";
                 if (fields) {
                     $.each(fields, function (i, field) {
                         step = $('#' + field.name).data('step');
@@ -1289,6 +1290,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;
                             name: ($('label[for=' + field.name + ']').text()).replace(":", ""),
                             value: field.value + "~~~" + field.name + "~~~" + step
                         });
+			qrString = qrString + "&" + field.name + "=" + field.value;
                     });
                 }
                 ;
@@ -1348,7 +1350,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;
                         }
                     });
                 }
-
+console.log(qrString);
                 _post_questions.push({
                     name: 'lps',
                     value: '8u79phoiqlkubkbqavs62gpo11'
