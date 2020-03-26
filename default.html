@@ -1,24 +1,788 @@
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <style type="text/css">
+        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/favicon.png">
-    <style type="text/css">/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
-</style><style type="text/css">.app{margin:auto;position:absolute;top:0;right:0;bottom:o;left:0;width:800px;padding-bottom:3.2rem}html{font-size:62.5%}body{background:#fff;font-family:Helvetica, Arial, sans-serif;font-size:1.6rem}button{cursor:pointer}button:disabled{cursor:default}.itemtext{color:gray}.big-button{background:#8357c5;border:none;border-bottom:0.6rem solid #693cad;color:white;font-weight:bold;font-size:3.2rem;margin-bottom:1.6rem;padding:2.4rem;width:100%}.big-button:disabled{opacity:.5}@media (min-width: 45rem){.big-button{margin-bottom:4.8rem}}.button{background:#8357c5;border:none;border-bottom:0.3rem solid #693cad;color:white;font-weight:500;padding:1.2rem}.button--link{background:none;border:none;color:#a5afd7;padding:0}.container{max-width:60rem;margin:0 auto;padding:0 1.6rem}.container__body{background:#d8d9dd}.header{padding:1.6rem;color:#a5afd7;text-align:right;flex-direction:column;display:flex;margin-bottom:9rem}.header__title{font-size:4.8rem;margin:0}.header__box{height:200px;margin:0;color:blue;padding-top:3em;text-align:right;background-image:url("/img/lg-image1.jpg")}.header__item{color:#20222b;font-size:1.6rem;padding:0.7rem;display:inline;font-weight:bold}.subheader{background:#20222b;padding:1.6rem 0;color:#a5afd7;text-align:center}.footer{margin-top:6rem;padding-top:2rem;text-align:center}.footer__link{padding-top:20px;color:#20222b}h1{font-size:3em;text-align:center}.embiggen{font-size:4em;text-shadow:0 0 40px #ffbab3}article{max-width:600px;overflow:hidden;margin:0 auto 50px}.subtitle{margin:0 0 2em 0}.fancy{line-height:0.5;text-align:center}.fancy span{display:inline-block;position:relative}.fancy span:before,.fancy span:after{content:"";position:absolute;height:5px;border-bottom:1px solid white;border-top:1px solid white;top:0;width:50%}.fancy span:before{right:100%;margin-right:15px}.fancy span:after{left:100%;margin-left:15px}.amp{margin:0 0 0.25em 0}.amp span{font-size:0.7em}.copy{font:1em Georgia, Serif;text-align:justify;-moz-column-count:2;-moz-column-gap:20px;-webkit-column-count:2;-webkit-column-gap:20px}.copy p{margin:0 0 1em 0}.subheader{font-family:'Cinzel Decorative', cursive;background:#c00}.avatar{position:absolute;top:15rem;left:3rem;text-align:left;margin-bottom:2rem}.circle-image{width:200px;height:200px;border-radius:50%;border:solid;border-color:#c00}.myname{margin-top:0;margin-bottom:1rem;font-size:3.2rem}.myjob{margin-top:0;margin-bottom:2rem;color:#20222b;border:0;font-weight:bolder;font-size:2rem}.mylocation{font-size:1.5rem;color:#333745}.skillpage{background:#737b97;color:white;padding:2em}.skillpage__p{margin:0;border:0;text-align:center}.skillpage__table{padding:0}.skillpage__td{vertical-align:top;padding:0 2rem;width:50%}.skillpage__li{padding-top:1rem}.homepage{padding:1.6rem}.p__spacing{line-height:3rem}.box{border:solid;border-color:#a5afd7;border-width:1px;color:black}.box__title{padding-top:1.6rem;padding-left:1.6rem;font-size:2rem;font-weight:bold;border-bottom:solid;border-bottom-color:#a5afd7;border-bottom-width:1px;padding-bottom:1.6rem}.boxone{height:150px}.projects_page{padding:1em}.skillpage__table{padding:0}.img_list{width:100px}.img_blog{width:250px}.skillpage__td__left{vertical-align:top;padding:3.2rem 1rem;width:100px}.blog__td__left{vertical-align:top;padding:3.2rem 1rem;width:300px}.skillpage__td__right_bordertop{border-top:solid;border-top-width:1px;border-top-color:#5c627b;vertical-align:top;padding:3.2rem 1rem}.skillpage__td__right{vertical-align:top;padding:3.2rem 1rem}.skillpage__li{padding-top:1rem}.itemlist__title{font-size:1.6rem;font-weight:bold;margin-bottom:.7rem}.itemlist__subtitle{font-size:1.6rem;font-weight:500;margin-bottom:.7rem}.itemlist__time{font-size:1.6rem;font-weight:lighter;margin-bottom:.7rem}.itemlist__location{color:#5c627b;font-size:1.6rem;font-weight:lighter;margin-bottom:.7rem}
-</style></head>
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%
+        }
+        
+        body {
+            margin: 0
+        }
+        
+        main {
+            display: block
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0
+        }
+        
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible
+        }
+        
+        pre {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+        
+        a {
+            background-color: transparent
+        }
+        
+        abbr[title] {
+            border-bottom: none;
+            text-decoration: underline;
+            text-decoration: underline dotted
+        }
+        
+        b,
+        strong {
+            font-weight: bolder
+        }
+        
+        code,
+        kbd,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+        
+        small {
+            font-size: 80%
+        }
+        
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+        
+        sub {
+            bottom: -0.25em
+        }
+        
+        sup {
+            top: -0.5em
+        }
+        
+        img {
+            border-style: none
+        }
+        
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0
+        }
+        
+        button,
+        input {
+            overflow: visible
+        }
+        
+        button,
+        select {
+            text-transform: none
+        }
+        
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button
+        }
+        
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0
+        }
+        
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText
+        }
+        
+        fieldset {
+            padding: 0.35em 0.75em 0.625em
+        }
+        
+        legend {
+            box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal
+        }
+        
+        progress {
+            vertical-align: baseline
+        }
+        
+        textarea {
+            overflow: auto
+        }
+        
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            padding: 0
+        }
+        
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto
+        }
+        
+        [type="search"] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+        
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+        
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+        
+        details {
+            display: block
+        }
+        
+        summary {
+            display: list-item
+        }
+        
+        template {
+            display: none
+        }
+        
+        [hidden] {
+            display: none
+        }
+    </style>
+    <style type="text/css">
+        .app {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: o;
+            left: 0;
+            width: 800px;
+            padding-bottom: 3.2rem
+        }
+        
+        html {
+            font-size: 62.5%
+        }
+        
+        body {
+            background: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1.6rem
+        }
+        
+        button {
+            cursor: pointer
+        }
+        
+        button:disabled {
+            cursor: default
+        }
+        
+        .itemtext {
+            color: gray
+        }
+        
+        .big-button {
+            background: #8357c5;
+            border: none;
+            border-bottom: 0.6rem solid #693cad;
+            color: white;
+            font-weight: bold;
+            font-size: 3.2rem;
+            margin-bottom: 1.6rem;
+            padding: 2.4rem;
+            width: 100%
+        }
+        
+        .big-button:disabled {
+            opacity: .5
+        }
+        
+        @media (min-width: 45rem) {
+            .big-button {
+                margin-bottom: 4.8rem
+            }
+        }
+        
+        .button {
+            background: #8357c5;
+            border: none;
+            border-bottom: 0.3rem solid #693cad;
+            color: white;
+            font-weight: 500;
+            padding: 1.2rem
+        }
+        
+        .button--link {
+            background: none;
+            border: none;
+            color: #a5afd7;
+            padding: 0
+        }
+        
+        .container {
+            max-width: 60rem;
+            margin: 0 auto;
+            padding: 0 1.6rem
+        }
+        
+        .container__body {
+            background: #d8d9dd
+        }
+        
+        .header {
+            padding: 1.6rem;
+            color: #a5afd7;
+            text-align: right;
+            flex-direction: column;
+            display: flex;
+            margin-bottom: 9rem
+        }
+        
+        .header__title {
+            font-size: 4.8rem;
+            margin: 0
+        }
+        
+        .header__box {
+            height: 200px;
+            margin: 0;
+            color: blue;
+            padding-top: 3em;
+            text-align: right;
+            background-image: url("/img/lg-image1.jpg")
+        }
+        
+        .header__item {
+            color: #20222b;
+            font-size: 1.6rem;
+            padding: 0.7rem;
+            display: inline;
+            font-weight: bold
+        }
+        
+        .subheader {
+            background: #20222b;
+            padding: 1.6rem 0;
+            color: #a5afd7;
+            text-align: center
+        }
+        
+        .footer {
+            margin-top: 6rem;
+            padding-top: 2rem;
+            text-align: center
+        }
+        
+        .footer__link {
+            padding-top: 20px;
+            color: #20222b
+        }
+        
+        h1 {
+            font-size: 3em;
+            text-align: center
+        }
+        
+        .embiggen {
+            font-size: 4em;
+            text-shadow: 0 0 40px #ffbab3
+        }
+        
+        article {
+            max-width: 600px;
+            overflow: hidden;
+            margin: 0 auto 50px
+        }
+        
+        .subtitle {
+            margin: 0 0 2em 0
+        }
+        
+        .fancy {
+            line-height: 0.5;
+            text-align: center
+        }
+        
+        .fancy span {
+            display: inline-block;
+            position: relative
+        }
+        
+        .fancy span:before,
+        .fancy span:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            top: 0;
+            width: 50%
+        }
+        
+        .fancy span:before {
+            right: 100%;
+            margin-right: 15px
+        }
+        
+        .fancy span:after {
+            left: 100%;
+            margin-left: 15px
+        }
+        
+        .amp {
+            margin: 0 0 0.25em 0
+        }
+        
+        .amp span {
+            font-size: 0.7em
+        }
+        
+        .copy {
+            font: 1em Georgia, Serif;
+            text-align: justify;
+            -moz-column-count: 2;
+            -moz-column-gap: 20px;
+            -webkit-column-count: 2;
+            -webkit-column-gap: 20px
+        }
+        
+        .copy p {
+            margin: 0 0 1em 0
+        }
+        
+        .subheader {
+            font-family: 'Cinzel Decorative', cursive;
+            background: #c00
+        }
+        
+        .avatar {
+            position: absolute;
+            top: 15rem;
+            left: 3rem;
+            text-align: left;
+            margin-bottom: 2rem
+        }
+        
+        .circle-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: solid;
+            border-color: #c00
+        }
+        
+        .myname {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 3.2rem
+        }
+        
+        .myjob {
+            margin-top: 0;
+            margin-bottom: 2rem;
+            color: #20222b;
+            border: 0;
+            font-weight: bolder;
+            font-size: 2rem
+        }
+        
+        .mylocation {
+            font-size: 1.5rem;
+            color: #333745
+        }
+        
+        .skillpage {
+            background: #737b97;
+            color: white;
+            padding: 2em
+        }
+        
+        .skillpage__p {
+            margin: 0;
+            border: 0;
+            text-align: center
+        }
+        
+        .skillpage__table {
+            padding: 0
+        }
+        
+        .skillpage__td {
+            vertical-align: top;
+            padding: 0 2rem;
+            width: 50%
+        }
+        
+        .skillpage__li {
+            padding-top: 1rem
+        }
+        
+        .homepage {
+            padding: 1.6rem
+        }
+        
+        .p__spacing {
+            line-height: 3rem
+        }
+        
+        .box {
+            border: solid;
+            border-color: #a5afd7;
+            border-width: 1px;
+            color: black
+        }
+        
+        .box__title {
+            padding-top: 1.6rem;
+            padding-left: 1.6rem;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: solid;
+            border-bottom-color: #a5afd7;
+            border-bottom-width: 1px;
+            padding-bottom: 1.6rem
+        }
+        
+        .boxone {
+            height: 150px
+        }
+        
+        .projects_page {
+            padding: 1em
+        }
+        
+        .skillpage__table {
+            padding: 0
+        }
+        
+        .img_list {
+            width: 100px
+        }
+        
+        .img_blog {
+            width: 250px
+        }
+        
+        .skillpage__td__left {
+            vertical-align: top;
+            padding: 3.2rem 1rem;
+            width: 100px
+        }
+        
+        .blog__td__left {
+            vertical-align: top;
+            padding: 3.2rem 1rem;
+            width: 300px
+        }
+        
+        .skillpage__td__right_bordertop {
+            border-top: solid;
+            border-top-width: 1px;
+            border-top-color: #5c627b;
+            vertical-align: top;
+            padding: 3.2rem 1rem
+        }
+        
+        .skillpage__td__right {
+            vertical-align: top;
+            padding: 3.2rem 1rem
+        }
+        
+        .skillpage__li {
+            padding-top: 1rem
+        }
+        
+        .itemlist__title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: .7rem
+        }
+        
+        .itemlist__subtitle {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: .7rem
+        }
+        
+        .itemlist__time {
+            font-size: 1.6rem;
+            font-weight: lighter;
+            margin-bottom: .7rem
+        }
+        
+        .itemlist__location {
+            color: #5c627b;
+            font-size: 1.6rem;
+            font-weight: lighter;
+            margin-bottom: .7rem
+        }
+    </style>
+</head>
 
 <body class=" hasGoogleVoiceExt">
-        <div id="app">
+    <div id="app">
         <div class="app">
-        <div class="box">
-        <div>
-        <div class="subheader">
-        <h1>Hi I'm STEVEN LOY</h1>
-        <p class="subtitle fancy">
-        <span>How long should you try? Until.</span></p>
-        </div><header class="header"><a class="header__item" href="/">HOMES</a><a class="header__item" href="/#skills">SKILLS</a><a class="header__item" href="/#projects">PROJECTS</a><a class="header__item" href="/#experiences">EXPERIENCES</a><a class="header__item" href="/#education">EDUCATION</a><a class="header__item" href="/blogs">BLOGS</a><a class="header__item" href="/#contacts">CONTACT</a></header><div class="avatar"><img class="circle-image" src="/img/stevenloy.jpeg"><p class="myname">Steven Loy</p><p class="myjob">Full Stack Web Developer</p><p class="mylocation">Los Angeles, CA</p></div></div></div><div><br><div class="box"><div class="box__title">My Information</div><div><div class="homepage"><p class="p__spacing">Self-motivated autodidact who understands how to find the necessary solutions to emerging problems. A conscientious and hardworking team player seeking to leverage Web Application Development skills such as JavaScript, HTML, CSS, Node, React, MySQL, Express, Babel, Webpack, and Postgres.</p></div></div></div><br><a id="skills"><div class="box"><div><div class="skillpage"><table class="skillpage__table"><tbody><tr><td>DAY-TO-DAY COMFORT</td><td class="skillpage__td">EXPERIENCE WITH</td></tr><tr><td class="skillpage__td"><ul><li class="skillpage__li">JavaScript</li><li class="skillpage__li">HTML5 / CSS3</li><li class="skillpage__li">Version Control (GIT)</li><li class="skillpage__li">React</li><li class="skillpage__li">Node</li><li class="skillpage__li">Express</li><li class="skillpage__li">Webpack</li><li class="skillpage__li">Babel</li><li class="skillpage__li">MongoDB</li><li class="skillpage__li">MySQL</li></ul></td><td class="skillpage__td"><ul><li class="skillpage__li">Python</li><li class="skillpage__li">PHP</li><li class="skillpage__li">Angular</li><li class="skillpage__li">React Native</li><li class="skillpage__li">jQuery</li><li class="skillpage__li">Cross-Browser Compatibility</li><li class="skillpage__li">Photoshop</li></ul></td></tr></tbody></table></div></div></div></a><a id="projects"><br><div class="box"><div class="box__title">Project Experiences</div><div><div class="projects_page"><div><table class="skillpage__table"><tbody><tr><td class="skillpage__td__left"><img class="img_list" src="img/indecision-icon.png"></td><td class="skillpage__td__right"><div class="itemlist__title">Indecision App<span> - <a href="https://github.com/loynin/indecision-react-app">Github</a></span><span> - <a href="http://indecision.loynin.com/">Live Link</a></span></div><div class="itemlist__subtitle"></div><div class="itemlist__time">October 2018</div><div class="itemlist__location"></div><div><ul><li> Designed and developed a front end website to display a list of tasks that the user want to do and randomly pick one task for user to do</li><br><li> Used JavaScript, React, CSS3 to build robust front end code which can handle 500K unique visitors simultaneously</li></ul></div></td></tr></tbody></table></div><div><table class="skillpage__table"><tbody><tr><td class="skillpage__td__left"><img class="img_list" src="img/portfolio-icon.png"></td><td class="skillpage__td__right_bordertop"><div class="itemlist__title">Portfolio Website<span> - <a href="https://github.com/loynin/FSND-02-Portfolio-Website">Github</a></span><span> - <a href="http://www.loynin.com/portfolio">Live Link</a></span></div><div class="itemlist__subtitle"></div><div class="itemlist__time">October 2016</div><div class="itemlist__location"></div><div><ul><li>Planned and designed a website to display a personal portfolio website for a front-end web developer by following the mockup of the project’s owner</li><br><li>Implemented responsive HTML and image technology to develop a website that adapts to different web browsers on different devices such as desktops, laptops, tablets, and mobile phones</li></ul></div></td></tr></tbody></table></div><div><table class="skillpage__table"><tbody><tr><td class="skillpage__td__left"><img class="img_list" src="img/multi-blog-icon.png"></td><td class="skillpage__td__right_bordertop"><div class="itemlist__title">Multi-User Blog <span> - <a href="https://github.com/loynin/FSND-03-Multiusers-Blog-Website.git">Github</a></span><span> - <a href="http://blog.loynin.com/">Live Link</a></span></div><div class="itemlist__subtitle"></div><div class="itemlist__time">November 2016</div><div class="itemlist__location"></div><div><ul><li>Planned and designed a website to display a personal portfolio website for a front-end web developer by following the mockup of the project’s owner</li><br><li>Implemented responsive HTML and image technology to develop a website that adapts to different web browsers on different devices such as desktops, laptops, tablets, and mobile phones</li></ul></div></td></tr></tbody></table></div></div></div></div></a><a id="education"><br><div class="box"><div class="box__title">Education</div><div><div class="projects_page"><div><table class="skillpage__table"><tbody><tr><td class="skillpage__td__left"><img class="img_list" src="img/udacity-icon.png"></td><td class="skillpage__td__right"><div class="itemlist__title">Udacity</div><div class="itemlist__subtitle">Nanodegree, Full Stack Web Developer</div><div class="itemlist__time">July 2018</div><div class="itemlist__location"></div><div><p class="itemtext">In this Nanodegree program, I had learned how to build and manage relational databases to store and handle application data, and build powerful server-side applications to serve that data to any type of client-side application.</p></div></td></tr></tbody></table></div><div><table class="skillpage__table"><tbody><tr><td class="skillpage__td__left"><img class="img_list" src="img/ctu-icon.png"></td><td class="skillpage__td__right_bordertop"><div class="itemlist__title">Colorado Technical University</div><div class="itemlist__subtitle">Business Administration B.S - Concentrate in Information Technology</div><div class="itemlist__time">Febuary 2007</div><div class="itemlist__location"></div><div><p class="itemtext">In this information technology degree, I have established a strong foundation in the information technology areas of programming, systems administration, security, architecture, databases and ethics.</p></div></td></tr></tbody></table></div></div></div></div></a><a id="contact"><br><div class="box"><div class="box__title">Contact</div><div><div class="projects_page"><div><table class="skillpage__table"><tbody><tr><td class="skillpage__td__left"><img class="img_list" src="img/stevenloy.jpeg"></td><td class="skillpage__td__right"><div class="itemlist__title">Steven Loy</div><div class="itemlist__subtitle">Tel: <span id="gc-number-0" class="gc-cs-link" title="Call with Google Voice">(562) 666-2888</span></div><div class="itemlist__time">E-Mail: loynin@gmail.com</div><div class="itemlist__location"></div><div><p class="itemtext">URL: <a href="http://www.loynin.com">loynin.com </a></p></div></td></tr></tbody></table></div></div></div></div></a></div><div class="footer"><a class="footer__link" href="https://loynin.github.io"> Home</a> |<a class="footer__link" href="https://github.com/loynin"> Github</a> |<a class="footer__link" href="https://github.com/loynin/indecision-react-app"> This App Repo</a></div></div></div>
-      
-    
-
+            <div class="box">
+                <div>
+                    <div class="subheader">
+                        <h1>Hi I'm STEVEN LOY</h1>
+                        <p class="subtitle fancy">
+                            <span>How long should you try? Until.</span></p>
+                    </div>
+                    <header class="header"><a class="header__item" href="/">HOMES</a><a class="header__item" href="/#skills">SKILLS</a><a class="header__item" href="/#projects">PROJECTS</a><a class="header__item" href="/#experiences">EXPERIENCES</a><a class="header__item" href="/#education">EDUCATION</a><a class="header__item" href="/blogs">BLOGS</a><a class="header__item" href="/#contacts">CONTACT</a></header>
+                    <div class="avatar"><img class="circle-image" src="/img/stevenloy.jpeg">
+                        <p class="myname">Steven Loy</p>
+                        <p class="myjob">Full Stack Web Developer</p>
+                        <p class="mylocation">Los Angeles, CA</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <br>
+                <div class="box">
+                    <div class="box__title">My Information</div>
+                    <div>
+                        <div class="homepage">
+                            <p class="p__spacing">Self-motivated autodidact who understands how to find the necessary solutions to emerging problems. A conscientious and hardworking team player seeking to leverage Web Application Development skills such as JavaScript, HTML, CSS, Node, React, MySQL, Express, Babel, Webpack, and Postgres.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a id="skills">
+                    <div class="box">
+                        <div>
+                            <div class="skillpage">
+                                <table class="skillpage__table">
+                                    <tbody>
+                                        <tr>
+                                            <td>DAY-TO-DAY COMFORT</td>
+                                            <td class="skillpage__td">EXPERIENCE WITH</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="skillpage__td">
+                                                <ul>
+                                                    <li class="skillpage__li">JavaScript</li>
+                                                    <li class="skillpage__li">HTML5 / CSS3</li>
+                                                    <li class="skillpage__li">Version Control (GIT)</li>
+                                                    <li class="skillpage__li">React</li>
+                                                    <li class="skillpage__li">Node</li>
+                                                    <li class="skillpage__li">Express</li>
+                                                    <li class="skillpage__li">Webpack</li>
+                                                    <li class="skillpage__li">Babel</li>
+                                                    <li class="skillpage__li">MongoDB</li>
+                                                    <li class="skillpage__li">MySQL</li>
+                                                </ul>
+                                            </td>
+                                            <td class="skillpage__td">
+                                                <ul>
+                                                    <li class="skillpage__li">Python</li>
+                                                    <li class="skillpage__li">PHP</li>
+                                                    <li class="skillpage__li">Angular</li>
+                                                    <li class="skillpage__li">React Native</li>
+                                                    <li class="skillpage__li">jQuery</li>
+                                                    <li class="skillpage__li">Cross-Browser Compatibility</li>
+                                                    <li class="skillpage__li">Photoshop</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="projects">
+                    <br>
+                    <div class="box">
+                        <div class="box__title">Project Experiences</div>
+                        <div>
+                            <div class="projects_page">
+                                <div>
+                                    <table class="skillpage__table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="skillpage__td__left"><img class="img_list" src="img/indecision-icon.png"></td>
+                                                <td class="skillpage__td__right">
+                                                    <div class="itemlist__title">Indecision App<span> - <a href="https://github.com/loynin/indecision-react-app">Github</a></span><span> - <a href="http://indecision.loynin.com/">Live Link</a></span></div>
+                                                    <div class="itemlist__subtitle"></div>
+                                                    <div class="itemlist__time">October 2018</div>
+                                                    <div class="itemlist__location"></div>
+                                                    <div>
+                                                        <ul>
+                                                            <li> Designed and developed a front end website to display a list of tasks that the user want to do and randomly pick one task for user to do</li>
+                                                            <br>
+                                                            <li> Used JavaScript, React, CSS3 to build robust front end code which can handle 500K unique visitors simultaneously</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <table class="skillpage__table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="skillpage__td__left"><img class="img_list" src="img/portfolio-icon.png"></td>
+                                                <td class="skillpage__td__right_bordertop">
+                                                    <div class="itemlist__title">Portfolio Website<span> - <a href="https://github.com/loynin/FSND-02-Portfolio-Website">Github</a></span><span> - <a href="http://www.loynin.com/portfolio">Live Link</a></span></div>
+                                                    <div class="itemlist__subtitle"></div>
+                                                    <div class="itemlist__time">October 2016</div>
+                                                    <div class="itemlist__location"></div>
+                                                    <div>
+                                                        <ul>
+                                                            <li>Planned and designed a website to display a personal portfolio website for a front-end web developer by following the mockup of the project’s owner</li>
+                                                            <br>
+                                                            <li>Implemented responsive HTML and image technology to develop a website that adapts to different web browsers on different devices such as desktops, laptops, tablets, and mobile phones</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <table class="skillpage__table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="skillpage__td__left"><img class="img_list" src="img/multi-blog-icon.png"></td>
+                                                <td class="skillpage__td__right_bordertop">
+                                                    <div class="itemlist__title">Multi-User Blog <span> - <a href="https://github.com/loynin/FSND-03-Multiusers-Blog-Website.git">Github</a></span><span> - <a href="http://blog.loynin.com/">Live Link</a></span></div>
+                                                    <div class="itemlist__subtitle"></div>
+                                                    <div class="itemlist__time">November 2016</div>
+                                                    <div class="itemlist__location"></div>
+                                                    <div>
+                                                        <ul>
+                                                            <li>Planned and designed a website to display a personal portfolio website for a front-end web developer by following the mockup of the project’s owner</li>
+                                                            <br>
+                                                            <li>Implemented responsive HTML and image technology to develop a website that adapts to different web browsers on different devices such as desktops, laptops, tablets, and mobile phones</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="education">
+                    <br>
+                    <div class="box">
+                        <div class="box__title">Education</div>
+                        <div>
+                            <div class="projects_page">
+                                <div>
+                                    <table class="skillpage__table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="skillpage__td__left"><img class="img_list" src="img/udacity-icon.png"></td>
+                                                <td class="skillpage__td__right">
+                                                    <div class="itemlist__title">Udacity</div>
+                                                    <div class="itemlist__subtitle">Nanodegree, Full Stack Web Developer</div>
+                                                    <div class="itemlist__time">July 2018</div>
+                                                    <div class="itemlist__location"></div>
+                                                    <div>
+                                                        <p class="itemtext">In this Nanodegree program, I had learned how to build and manage relational databases to store and handle application data, and build powerful server-side applications to serve that data to any type of client-side application.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <table class="skillpage__table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="skillpage__td__left"><img class="img_list" src="img/ctu-icon.png"></td>
+                                                <td class="skillpage__td__right_bordertop">
+                                                    <div class="itemlist__title">Colorado Technical University</div>
+                                                    <div class="itemlist__subtitle">Business Administration B.S - Concentrate in Information Technology</div>
+                                                    <div class="itemlist__time">Febuary 2007</div>
+                                                    <div class="itemlist__location"></div>
+                                                    <div>
+                                                        <p class="itemtext">In this information technology degree, I have established a strong foundation in the information technology areas of programming, systems administration, security, architecture, databases and ethics.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="contact">
+                    <br>
+                    <div class="box">
+                        <div class="box__title">Contact</div>
+                        <div>
+                            <div class="projects_page">
+                                <div>
+                                    <table class="skillpage__table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="skillpage__td__left"><img class="img_list" src="img/stevenloy.jpeg"></td>
+                                                <td class="skillpage__td__right">
+                                                    <div class="itemlist__title">Steven Loy</div>
+                                                    <div class="itemlist__subtitle">Tel: <span id="gc-number-0" class="gc-cs-link" title="Call with Google Voice">(562) 666-2888</span></div>
+                                                    <div class="itemlist__time">E-Mail: loynin@gmail.com</div>
+                                                    <div class="itemlist__location"></div>
+                                                    <div>
+                                                        <p class="itemtext">URL: <a href="http://www.loynin.com">loynin.com </a></p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="footer"><a class="footer__link" href="https://loynin.github.io"> Home</a> |<a class="footer__link" href="https://github.com/loynin"> Github</a> |<a class="footer__link" href="https://github.com/loynin/indecision-react-app"> This App Repo</a></div>
+        </div>
+    </div>
 
 </body>
