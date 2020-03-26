@@ -1290,7 +1290,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;
                             name: ($('label[for=' + field.name + ']').text()).replace(":", ""),
                             value: field.value + "~~~" + field.name + "~~~" + step
                         });
-			qrString = qrString + "&" + field.name + "=" + field.value;
+			
                     });
                 }
                 ;
@@ -1319,7 +1319,7 @@ border-radius: 4px;background:#ABB3B6;padding:3px;
                             qstep = $(this).find('.q-text').data('step');
                             _option_arr.push(qvalues);
                         });
-
+                   qrString = qrString + "&" + qfield + "=" + qvalues;
                         if (qfield == "fullname") {
                             first = LEADPOP.getFirstName(qvalues);
                             last = LEADPOP.getLastName(qvalues);
