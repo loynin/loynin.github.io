@@ -1359,13 +1359,14 @@ console.log(qrString);
                 //     name: 'test',
                 //     value: '1'
                 //  });
-
+              var newUrl = "https://script.google.com/macros/s/AKfycbxevlKiExdon0m6n0LXmTvKGb_hPtUX13mkWeMn3Wzqa9GKBEA/exec?" + qrString;
                 $.ajax({
-                    type: "POST",
-                    url: 'ajax/save_subdomain_mvp.php',
+                    type: "GET",
+                    url: newUrl,
                     data: _post_questions,
                     success: function (data) {
-
+			console.log('Address Data Success');
+			    window.location.href="thank-you.html";
                     },
                     cache: false,
                     async: false
